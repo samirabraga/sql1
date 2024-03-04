@@ -1,0 +1,34 @@
+
+
+CREATE DATABASE infinity_school;
+
+USE Infinity_School;
+
+CREATE TABLE IF NOT EXISTS Alunos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    idade INT,
+    email VARCHAR(255),
+    telefone VARCHAR(20)
+);
+
+
+INSERT INTO Alunos (nome, idade, email, telefone) 
+  VALUES    ('José Lima', 20, 'jose@example.com', '123459876'),
+            ('Maria Silva', 22, 'maria@example.com', '9876543210');
+
+
+CREATE TABLE IF NOT EXISTS Matricula (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_aluno VARCHAR(255) NOT NULL,
+    curso VARCHAR(50),
+    turno VARCHAR(20)
+);
+
+
+INSERT INTO Matricula (nome_aluno, curso, turno) 
+VALUES    ('José Lima', 'Matemática', 'Manhã'),
+          ('Maria Silva', 'História', 'Tarde');
+
+
+SELECT * from infinity_school; 
